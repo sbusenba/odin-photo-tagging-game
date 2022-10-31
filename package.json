@@ -1,0 +1,25 @@
+{
+  "name": "odin-photo-tagging-game",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build":"webpack --config webpack.config.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbusenba/odin-photo-tagging-game.git"
+  },
+  "author": "Steven Busenbarrick",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sbusenba/odin-photo-tagging-game/issues"
+  },
+  "homepage": "https://github.com/sbusenba/odin-photo-tagging-game#readme",
+  "dependencies": {
+    "firebase": "^9.13.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
