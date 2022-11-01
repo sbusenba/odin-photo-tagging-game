@@ -1,0 +1,1 @@
+(()=>{let e=document.querySelector("#image-holder"),t=document.querySelector("#cursor");e.addEventListener("click",(e=>{console.log(`x=${e.x}, y=${e.y}`),t.style.top=e.pageY-27+"px",t.style.left=I(e.pageY-27)+"px",console.log(e)})),e.addEventListener("mousemove",(e=>{t.style.top=e.pageY-27+"px",t.style.left=e.pageX-27+"px"}))})();

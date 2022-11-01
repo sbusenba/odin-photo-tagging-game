@@ -1,0 +1,18 @@
+#image-holder {
+    width:100vw;
+    height:100vh;
+    overflow: auto;
+    position:relative;
+    cursor:none;
+}
+#cursor {
+    height:50px;
+    width:50px;
+    border-radius: 25px;
+    border:2px solid black;
+    opacity:0.5;
+    position:absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
