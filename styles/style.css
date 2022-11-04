@@ -1,9 +1,12 @@
 #image-holder {
-    width:100vw;
-    height:100vh;
+    width:1882px;
+    height: 1262px;
     overflow: auto;
     position:relative;
     cursor:none;
+    background-image: url('../imgs/mcu-lrg.jpg');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 #cursor {
     user-select: none;
