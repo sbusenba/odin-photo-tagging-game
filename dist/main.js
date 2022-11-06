@@ -15,7 +15,7 @@
   \**********************/
 /***/ (() => {
 
-eval("\nlet imageHolder = document.querySelector('#image-holder')\nlet cursor = document.querySelector('#cursor')\nimageHolder.addEventListener('click',(e)=>{\n    console.log(`x=${e.pageX}, y=${e.pageY}`)\n});\n\nimageHolder.addEventListener('mousemove',(e)=>{\n    cursor.style.top=(e.pageY-27)+'px'\n    cursor.style.left=(e.pageX-27)+'px'\n\n})\n\n//# sourceURL=webpack://odin-photo-tagging-game/./src/index.js?");
+eval("\nlet imageHolder = document.querySelector('#image-holder')\nlet cursor = document.querySelector('#cursor')\nlet imageMenu = document.querySelector('#select-menu')\nlet imageMenuVisibility= false;\n\nconst toggleSelect = ()=>{\n\n    if (!imageMenuVisibility){\n        imageMenu.style.display= 'flex'\n        imageMenuVisibility = true;\n    } else {\n        imageMenu.style.display= 'none'\n        imageMenuVisibility = false;\n    }\n\n}\n\n\nimageHolder.addEventListener('click',(e)=>{\n    imageMenu.style.top=(e.pageY)+'px'\n    imageMenu.style.left=(e.pageX)+'px'\n    toggleSelect()\n});\n\nimageHolder.addEventListener('mousemove',(e)=>{\n    cursor.style.top=(e.pageY-27)+'px'\n    cursor.style.left=(e.pageX-27)+'px'\n\n})\n\n//# sourceURL=webpack://odin-photo-tagging-game/./src/index.js?");
 
 /***/ })
 

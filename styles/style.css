@@ -20,3 +20,23 @@
     align-items: center;
     justify-content: center;
 }
+#select-menu{
+    background-color: dimgrey;
+    position:absolute;
+    width:8rem;
+    display:none;
+}
+#select-menu ul{
+    color:aliceblue;
+    list-style: none;
+    margin:0;
+    padding:0;
+}
+#select-menu li{
+    margin:0.25rem;
+}
+#select-menu div{
+    background-color: darkslategrey;
+    padding:0.25rem;
+    width:7.5rem;
+}
