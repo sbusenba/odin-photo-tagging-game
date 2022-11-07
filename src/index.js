@@ -51,7 +51,8 @@ let charsFound = 0;
 let wilmaFound = false;
 let waldoFound = false;
 let odlawFound = false;
-
+let timer = null;
+let secondsElapsed = 0;
 function hideDirections(){
     givingDirections = false;
     let directionDiv = document.querySelector('#directions')
@@ -69,9 +70,11 @@ function showCongrats(){
 }
 
 function startTimer(){
-
+    timer =setInterval(()=>{secondsElapsed++},1000)
 }
-
+function stopTimer(){
+    clearInterval(timer)
+}
 async function getLocations (){
     try{
     storedLocations = await (await getDocs(collection(getFirestore(),`${location}`))).docs;
@@ -166,7 +169,11 @@ menuItems.forEach((imageItem)=>{
         if (wilmaFound&&waldoFound&&odlawFound){
             console.log('you win!')
             hideHolder()
+            stopTimer()
+            let score = document.querySelector('#score-span')
+            score.innerText=secondsElapsed
             showCongrats()
+           
 
         }
     })
