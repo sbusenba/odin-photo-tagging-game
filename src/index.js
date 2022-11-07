@@ -128,13 +128,13 @@ locations.forEach((locationButton)=>{
         location = e.target.innerText
         switch(e.target.innerText){
             case 'The Ski Slope':
-                imageHolder.style.backGround = skiImg
+                imageHolder.classList.add('skiscene')
             break;
             case 'The Beach':
-                imageHolder.style.backGround = beachImg
+                imageHolder.classList.add('beachscene')
             break;
             case 'The Moon Base':
-                imageHolder.style.backGround = moonImg
+                imageHolder.classList.add('spacescene')
             break;
             default:
             break;
