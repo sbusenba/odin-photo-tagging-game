@@ -33,6 +33,9 @@ let locations = document.querySelectorAll('.location-button')
 let storedLocations =''
 let location = ''
 let charsFound = 0;
+let wilmaFound = false;
+let waldoFound = false;
+let odlawFound = false;
 
 function hideDirections(){
     givingDirections = false;
@@ -42,6 +45,14 @@ function hideDirections(){
 function showHolder(){
     imageHolder.style.display = 'block'
 }
+function hideHolder(){
+    imageHolder.style.display = 'none'
+}
+function showCongrats(){
+    let congrats = document.querySelector('#congrats') 
+    congrats.style.display = 'block'
+}
+
 function startTimer(){
 
 }
@@ -49,7 +60,6 @@ function startTimer(){
 async function getLocations (){
     try{
     storedLocations = await (await getDocs(collection(getFirestore(),`${location}`))).docs;
-    console.table(locations)
     }
     catch(error){
         console.error('Error retrieving from Firebase Database', error);
@@ -70,7 +80,6 @@ async function mapClick (loc,char,x,y){
 }
 function checkClick (char,x,y){
     let found = false;
-    
     storedLocations.forEach((location)=>{
         if ((location.data().character === char)&&
         (parseInt(location.data().xLoc) >= parseInt(x)-20)&&
@@ -78,15 +87,22 @@ function checkClick (char,x,y){
         (parseInt(location.data().yLoc) >= parseInt(y)-20)&&
         (parseInt(location.data().yLoc) <= parseInt(y)+20)){
             console.log(`${char} found!`)
-            found = true;
-            charsFound++; 
-        } else {
-            if (char ===location.data().character){
-            console.log(`${char} not found x =${parseInt(x)} xLoc =${parseInt(location.data().xLoc)}
-             y =${parseInt(y)} storedY =${parseInt(location.data().yLoc)}`)
+            if ((char ==="Waldo")&&(waldoFound===false)){
+                waldoFound = true;
+                found = true;
+                charsFound+=1; 
+            }else if ((char === "Odlaw")&&(odlawFound===false)){
+                odlawFound = true;
+                found = true;
+                charsFound+=1; 
             }
+            if ((char === "Wilma")&&(wilmaFound===false)){
+                wilmaFound = true;
+                found = true;
+                charsFound+=1; 
+            }
+           
         }
-    
     })
     return found;
 
@@ -117,7 +133,6 @@ locations.forEach((locationButton)=>{
 
 menuItems.forEach((imageItem)=>{
     imageItem.addEventListener('click',(e)=>{
-        console.log(`${e.target.innerText} at ${imageMenu.style.left}, ${imageMenu.style.top}`)
         //mapClick(location,e.target.innerText,imageMenu.style.left,imageMenu.style.top)
         
         let tag = document.createElement('div')
@@ -128,10 +143,17 @@ menuItems.forEach((imageItem)=>{
             tag.classList.add('bad')
 
         }
+        console.log(`${charsFound} characters found!`)
+
         tag.style.left = (parseInt(imageMenu.style.left)-27)+'px'
         tag.style.top = (parseInt(imageMenu.style.top)-27)+'px'
         imageHolder.appendChild(tag)
+        if (wilmaFound&&waldoFound&&odlawFound){
+            console.log('you win!')
+            hideHolder()
+            showCongrats()
 
+        }
     })
 })
 
