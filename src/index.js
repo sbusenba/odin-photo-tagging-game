@@ -20,16 +20,38 @@ let imageHolder = document.querySelector('#image-holder')
 let cursor = document.querySelector('#cursor')
 let imageMenu = document.querySelector('#select-menu')
 let imageMenuVisibility= false;
+let menuItems = document.querySelectorAll('#select-menu div')
 
+menuItems.forEach((imageItem)=>{
+    imageItem.addEventListener('click',(e)=>{
+        console.log(`${e.target.innerText} at ${imageMenu.style.left}, ${imageMenu.style.top}`)
+        let tag = document.createElement('div')
+        tag.classList.add('tag')
+        if (Math.random()>0.50){
+            tag.classList.add('good')
+        } else {
+            tag.classList.add('bad')
+        }
+        console.log(imageMenu.style.left)
+        tag.style.left = (parseInt(imageMenu.style.left)-27)+'px'
+        console.log(tag.style.left)
+        tag.style.top = (parseInt(imageMenu.style.top)-27)+'px'
+        imageHolder.appendChild(tag)
+
+    })
+})
 
 const toggleSelect = ()=>{
 
     if (!imageMenuVisibility){
         imageMenu.style.display= 'flex'
         imageMenuVisibility = true;
+        imageHolder.style.cursor = 'auto'
+
     } else {
         imageMenu.style.display= 'none'
         imageMenuVisibility = false;
+        imageHolder.style.cursor = 'none'
     }
 
 }
@@ -42,7 +64,8 @@ imageHolder.addEventListener('click',(e)=>{
 });
 
 imageHolder.addEventListener('mousemove',(e)=>{
+    if (!imageMenuVisibility){
     cursor.style.top=(e.pageY-27)+'px'
     cursor.style.left=(e.pageX-27)+'px'
-
+    }
 })
