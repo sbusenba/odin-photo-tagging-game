@@ -13,8 +13,8 @@
     height:50px;
     width:50px;
     border-radius: 25px;
-    border:2px dotted white;
-    color: white;
+    border:4px dotted rgb(121, 120, 120);
+    color: rgb(116, 115, 115);
     font-weight: 900;
     opacity:0.75;
     position:absolute;
@@ -112,4 +112,13 @@
     display:none;
     flex-direction: column;
     align-items: center;
+}
+.skiscene {
+    background-image: url('../imgs/waldo-ski.jpg');
+}
+.spacescene {
+    background-image: url('../imgs/waldo-space.jpg');
+}
+.beachscene {
+    background-image: url('../imgs/waldo-beach.jpg');
 }
