@@ -4,7 +4,6 @@
     overflow: auto;
     position:relative;
     cursor:none;
-    background-image: url('../imgs/mcu-lrg.jpg');
     background-size: contain;
     background-repeat: no-repeat;
     display:none;

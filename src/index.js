@@ -10,7 +10,7 @@ import {
     where,
     getDocs,
   } from 'firebase/firestore';
-// Your web app's Firebase configuration
+  // Your web app's Firebase configuration
 const firebaseConfig = {
   apiKey: "AIzaSyCc_AQ4M7-SdiABMy2nEObGUEFeTGhs3i8",
   authDomain: "odin-photo-tagging-game.firebaseapp.com",
@@ -22,6 +22,21 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+import beachImg from './imgs/waldo-beach.jpg'
+import skiImg from './imgs/waldo-ski.jpg'
+import moonImg from './imgs/waldo-space.jpg'
+import './styles/style.css'
+import odlawImg from './imgs/Odlaw.webp'
+import waldoImg from './imgs/Waldo.webp'
+import wilmaImg from './imgs/Wilma.webp'
+let odlawPic = document.querySelector('#odlaw-img')
+odlawPic.src = odlawImg;
+let waldoPic = document.querySelector('#waldo-img')
+waldoPic.src = waldoImg;
+let wilmaPic = document.querySelector('#wilma-img')
+wilmaPic.src = wilmaImg;
+
 
 let imageHolder = document.querySelector('#image-holder')
 let cursor = document.querySelector('#cursor')
@@ -113,13 +128,13 @@ locations.forEach((locationButton)=>{
         location = e.target.innerText
         switch(e.target.innerText){
             case 'The Ski Slope':
-            imageHolder.style.backgroundImage = 'url(../imgs/waldo-ski.jpg)'
+                imageHolder.style.backGround = skiImg
             break;
             case 'The Beach':
-                imageHolder.style.backgroundImage = 'url(../imgs/waldo-beach.jpg)'
+                imageHolder.style.backGround = beachImg
             break;
             case 'The Moon Base':
-                imageHolder.style.backgroundImage = 'url(../imgs/waldo-space.jpg)'
+                imageHolder.style.backGround = moonImg
             break;
             default:
             break;

@@ -40,6 +40,36 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./node_modules/css-loader/dist/cjs.js!./src/styles/style.css":
+/*!********************************************************************!*\
+  !*** ./node_modules/css-loader/dist/cjs.js!./src/styles/style.css ***!
+  \********************************************************************/
+/***/ ((module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/noSourceMaps.js */ \"./node_modules/css-loader/dist/runtime/noSourceMaps.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\");\n/* harmony import */ var _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1__);\n// Imports\n\n\nvar ___CSS_LOADER_EXPORT___ = _node_modules_css_loader_dist_runtime_api_js__WEBPACK_IMPORTED_MODULE_1___default()((_node_modules_css_loader_dist_runtime_noSourceMaps_js__WEBPACK_IMPORTED_MODULE_0___default()));\n// Module\n___CSS_LOADER_EXPORT___.push([module.id, \"#image-holder {\\n    width:1882px;\\n    height: 1262px;\\n    overflow: auto;\\n    position:relative;\\n    cursor:none;\\n    background-size: contain;\\n    background-repeat: no-repeat;\\n    display:none;\\n}\\n#cursor {\\n    user-select: none;\\n    height:50px;\\n    width:50px;\\n    border-radius: 25px;\\n    border:2px dotted white;\\n    color: white;\\n    font-weight: 900;\\n    opacity:0.75;\\n    position:absolute;\\n    display:flex;\\n    align-items: center;\\n    justify-content: center;\\n}\\n#select-menu{\\n    background-color: dimgrey;\\n    position:absolute;\\n    width:8rem;\\n    display:none;\\n    cursor:default;\\n}\\n#select-menu ul{\\n    color:aliceblue;\\n    list-style: none;\\n    margin:0;\\n    padding:0;\\n}\\n#select-menu li{\\n    margin:0.25rem;\\n}\\n#select-menu div{\\n    background-color: darkslategrey;\\n    padding:0.25rem;\\n    width:7.5rem;\\n}\\n.tag{\\n    user-select: none;\\n    height:50px;\\n    width:50px;\\n    border-radius: 25px;\\n    opacity:0.75;\\n    position:absolute;\\n    display:flex;\\n    align-items: center;\\n    justify-content: center;\\n}\\n\\n.tag.bad{\\n    border:2px solid red;\\n    \\n}\\n.tag.good {\\n    border:2px solid green;\\n}\\n\\n#directions {\\n    display:flex;\\n    flex-direction: column;\\n    align-items: center;\\n}\\n.characters {\\n    display:flex;\\n    flex-direction: row;\\n    justify-content: center;\\n    gap:2rem;\\n}\\n.character-card{\\n    display:flex;\\n    flex-direction: column;\\n    align-items: center;\\n    border-radius: 5px;\\n    border:2px black solid;\\n    padding:.5rem;\\n}\\n.character-card img {\\n    border-radius: 5px;\\n    border:2px black solid;\\n\\n}\\n#location-holder {\\n    display:flex;\\n    flex-direction: row;\\n    justify-content: center;\\n    gap:2rem;\\n}\\n\\n.location-button{\\n    border-radius: 5px;\\n    box-shadow:2px 2px 2px 2px darkgray;\\n    padding:.5rem;\\n}\\n.location-button:hover{\\n    border-radius: 5px;\\n    background-color: rgb(199, 199, 199);\\n    padding:.5rem;\\n    box-shadow: none;\\n}\\n#directions>div{\\n    margin:1rem;\\n}\\n#congrats{\\n    display:none;\\n    flex-direction: column;\\n    align-items: center;\\n}\", \"\"]);\n// Exports\n/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);\n\n\n//# sourceURL=webpack://odin-photo-tagging-game/./src/styles/style.css?./node_modules/css-loader/dist/cjs.js");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/api.js":
+/*!*****************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/api.js ***!
+  \*****************************************************/
+/***/ ((module) => {
+
+eval("\n\n/*\n  MIT License http://www.opensource.org/licenses/mit-license.php\n  Author Tobias Koppers @sokra\n*/\nmodule.exports = function (cssWithMappingToString) {\n  var list = []; // return the list of modules as css string\n\n  list.toString = function toString() {\n    return this.map(function (item) {\n      var content = \"\";\n      var needLayer = typeof item[5] !== \"undefined\";\n\n      if (item[4]) {\n        content += \"@supports (\".concat(item[4], \") {\");\n      }\n\n      if (item[2]) {\n        content += \"@media \".concat(item[2], \" {\");\n      }\n\n      if (needLayer) {\n        content += \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\");\n      }\n\n      content += cssWithMappingToString(item);\n\n      if (needLayer) {\n        content += \"}\";\n      }\n\n      if (item[2]) {\n        content += \"}\";\n      }\n\n      if (item[4]) {\n        content += \"}\";\n      }\n\n      return content;\n    }).join(\"\");\n  }; // import a list of modules into the list\n\n\n  list.i = function i(modules, media, dedupe, supports, layer) {\n    if (typeof modules === \"string\") {\n      modules = [[null, modules, undefined]];\n    }\n\n    var alreadyImportedModules = {};\n\n    if (dedupe) {\n      for (var k = 0; k < this.length; k++) {\n        var id = this[k][0];\n\n        if (id != null) {\n          alreadyImportedModules[id] = true;\n        }\n      }\n    }\n\n    for (var _k = 0; _k < modules.length; _k++) {\n      var item = [].concat(modules[_k]);\n\n      if (dedupe && alreadyImportedModules[item[0]]) {\n        continue;\n      }\n\n      if (typeof layer !== \"undefined\") {\n        if (typeof item[5] === \"undefined\") {\n          item[5] = layer;\n        } else {\n          item[1] = \"@layer\".concat(item[5].length > 0 ? \" \".concat(item[5]) : \"\", \" {\").concat(item[1], \"}\");\n          item[5] = layer;\n        }\n      }\n\n      if (media) {\n        if (!item[2]) {\n          item[2] = media;\n        } else {\n          item[1] = \"@media \".concat(item[2], \" {\").concat(item[1], \"}\");\n          item[2] = media;\n        }\n      }\n\n      if (supports) {\n        if (!item[4]) {\n          item[4] = \"\".concat(supports);\n        } else {\n          item[1] = \"@supports (\".concat(item[4], \") {\").concat(item[1], \"}\");\n          item[4] = supports;\n        }\n      }\n\n      list.push(item);\n    }\n  };\n\n  return list;\n};\n\n//# sourceURL=webpack://odin-photo-tagging-game/./node_modules/css-loader/dist/runtime/api.js?");
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/dist/runtime/noSourceMaps.js":
+/*!**************************************************************!*\
+  !*** ./node_modules/css-loader/dist/runtime/noSourceMaps.js ***!
+  \**************************************************************/
+/***/ ((module) => {
+
+eval("\n\nmodule.exports = function (i) {\n  return i[1];\n};\n\n//# sourceURL=webpack://odin-photo-tagging-game/./node_modules/css-loader/dist/runtime/noSourceMaps.js?");
+
+/***/ }),
+
 /***/ "./node_modules/firebase/app/dist/index.esm.js":
 /*!*****************************************************!*\
   !*** ./node_modules/firebase/app/dist/index.esm.js ***!
@@ -60,13 +90,143 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 
 /***/ }),
 
+/***/ "./src/styles/style.css":
+/*!******************************!*\
+  !*** ./src/styles/style.css ***!
+  \******************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"default\": () => (__WEBPACK_DEFAULT_EXPORT__)\n/* harmony export */ });\n/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js */ \"./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleDomAPI.js */ \"./node_modules/style-loader/dist/runtime/styleDomAPI.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertBySelector.js */ \"./node_modules/style-loader/dist/runtime/insertBySelector.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js */ \"./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/insertStyleElement.js */ \"./node_modules/style-loader/dist/runtime/insertStyleElement.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4__);\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! !../../node_modules/style-loader/dist/runtime/styleTagTransform.js */ \"./node_modules/style-loader/dist/runtime/styleTagTransform.js\");\n/* harmony import */ var _node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5__);\n/* harmony import */ var _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! !!../../node_modules/css-loader/dist/cjs.js!./style.css */ \"./node_modules/css-loader/dist/cjs.js!./src/styles/style.css\");\n\n      \n      \n      \n      \n      \n      \n      \n      \n      \n\nvar options = {};\n\noptions.styleTagTransform = (_node_modules_style_loader_dist_runtime_styleTagTransform_js__WEBPACK_IMPORTED_MODULE_5___default());\noptions.setAttributes = (_node_modules_style_loader_dist_runtime_setAttributesWithoutAttributes_js__WEBPACK_IMPORTED_MODULE_3___default());\n\n      options.insert = _node_modules_style_loader_dist_runtime_insertBySelector_js__WEBPACK_IMPORTED_MODULE_2___default().bind(null, \"head\");\n    \noptions.domAPI = (_node_modules_style_loader_dist_runtime_styleDomAPI_js__WEBPACK_IMPORTED_MODULE_1___default());\noptions.insertStyleElement = (_node_modules_style_loader_dist_runtime_insertStyleElement_js__WEBPACK_IMPORTED_MODULE_4___default());\n\nvar update = _node_modules_style_loader_dist_runtime_injectStylesIntoStyleTag_js__WEBPACK_IMPORTED_MODULE_0___default()(_node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__[\"default\"], options);\n\n\n\n\n       /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__[\"default\"] && _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__[\"default\"].locals ? _node_modules_css_loader_dist_cjs_js_style_css__WEBPACK_IMPORTED_MODULE_6__[\"default\"].locals : undefined);\n\n\n//# sourceURL=webpack://odin-photo-tagging-game/./src/styles/style.css?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js":
+/*!****************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js ***!
+  \****************************************************************************/
+/***/ ((module) => {
+
+eval("\n\nvar stylesInDOM = [];\n\nfunction getIndexByIdentifier(identifier) {\n  var result = -1;\n\n  for (var i = 0; i < stylesInDOM.length; i++) {\n    if (stylesInDOM[i].identifier === identifier) {\n      result = i;\n      break;\n    }\n  }\n\n  return result;\n}\n\nfunction modulesToDom(list, options) {\n  var idCountMap = {};\n  var identifiers = [];\n\n  for (var i = 0; i < list.length; i++) {\n    var item = list[i];\n    var id = options.base ? item[0] + options.base : item[0];\n    var count = idCountMap[id] || 0;\n    var identifier = \"\".concat(id, \" \").concat(count);\n    idCountMap[id] = count + 1;\n    var indexByIdentifier = getIndexByIdentifier(identifier);\n    var obj = {\n      css: item[1],\n      media: item[2],\n      sourceMap: item[3],\n      supports: item[4],\n      layer: item[5]\n    };\n\n    if (indexByIdentifier !== -1) {\n      stylesInDOM[indexByIdentifier].references++;\n      stylesInDOM[indexByIdentifier].updater(obj);\n    } else {\n      var updater = addElementStyle(obj, options);\n      options.byIndex = i;\n      stylesInDOM.splice(i, 0, {\n        identifier: identifier,\n        updater: updater,\n        references: 1\n      });\n    }\n\n    identifiers.push(identifier);\n  }\n\n  return identifiers;\n}\n\nfunction addElementStyle(obj, options) {\n  var api = options.domAPI(options);\n  api.update(obj);\n\n  var updater = function updater(newObj) {\n    if (newObj) {\n      if (newObj.css === obj.css && newObj.media === obj.media && newObj.sourceMap === obj.sourceMap && newObj.supports === obj.supports && newObj.layer === obj.layer) {\n        return;\n      }\n\n      api.update(obj = newObj);\n    } else {\n      api.remove();\n    }\n  };\n\n  return updater;\n}\n\nmodule.exports = function (list, options) {\n  options = options || {};\n  list = list || [];\n  var lastIdentifiers = modulesToDom(list, options);\n  return function update(newList) {\n    newList = newList || [];\n\n    for (var i = 0; i < lastIdentifiers.length; i++) {\n      var identifier = lastIdentifiers[i];\n      var index = getIndexByIdentifier(identifier);\n      stylesInDOM[index].references--;\n    }\n\n    var newLastIdentifiers = modulesToDom(newList, options);\n\n    for (var _i = 0; _i < lastIdentifiers.length; _i++) {\n      var _identifier = lastIdentifiers[_i];\n\n      var _index = getIndexByIdentifier(_identifier);\n\n      if (stylesInDOM[_index].references === 0) {\n        stylesInDOM[_index].updater();\n\n        stylesInDOM.splice(_index, 1);\n      }\n    }\n\n    lastIdentifiers = newLastIdentifiers;\n  };\n};\n\n//# sourceURL=webpack://odin-photo-tagging-game/./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/insertBySelector.js":
+/*!********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/insertBySelector.js ***!
+  \********************************************************************/
+/***/ ((module) => {
+
+eval("\n\nvar memo = {};\n/* istanbul ignore next  */\n\nfunction getTarget(target) {\n  if (typeof memo[target] === \"undefined\") {\n    var styleTarget = document.querySelector(target); // Special case to return head of iframe instead of iframe itself\n\n    if (window.HTMLIFrameElement && styleTarget instanceof window.HTMLIFrameElement) {\n      try {\n        // This will throw an exception if access to iframe is blocked\n        // due to cross-origin restrictions\n        styleTarget = styleTarget.contentDocument.head;\n      } catch (e) {\n        // istanbul ignore next\n        styleTarget = null;\n      }\n    }\n\n    memo[target] = styleTarget;\n  }\n\n  return memo[target];\n}\n/* istanbul ignore next  */\n\n\nfunction insertBySelector(insert, style) {\n  var target = getTarget(insert);\n\n  if (!target) {\n    throw new Error(\"Couldn't find a style target. This probably means that the value for the 'insert' parameter is invalid.\");\n  }\n\n  target.appendChild(style);\n}\n\nmodule.exports = insertBySelector;\n\n//# sourceURL=webpack://odin-photo-tagging-game/./node_modules/style-loader/dist/runtime/insertBySelector.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/insertStyleElement.js":
+/*!**********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/insertStyleElement.js ***!
+  \**********************************************************************/
+/***/ ((module) => {
+
+eval("\n\n/* istanbul ignore next  */\nfunction insertStyleElement(options) {\n  var element = document.createElement(\"style\");\n  options.setAttributes(element, options.attributes);\n  options.insert(element, options.options);\n  return element;\n}\n\nmodule.exports = insertStyleElement;\n\n//# sourceURL=webpack://odin-photo-tagging-game/./node_modules/style-loader/dist/runtime/insertStyleElement.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js":
+/*!**********************************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js ***!
+  \**********************************************************************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("\n\n/* istanbul ignore next  */\nfunction setAttributesWithoutAttributes(styleElement) {\n  var nonce =  true ? __webpack_require__.nc : 0;\n\n  if (nonce) {\n    styleElement.setAttribute(\"nonce\", nonce);\n  }\n}\n\nmodule.exports = setAttributesWithoutAttributes;\n\n//# sourceURL=webpack://odin-photo-tagging-game/./node_modules/style-loader/dist/runtime/setAttributesWithoutAttributes.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/styleDomAPI.js":
+/*!***************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/styleDomAPI.js ***!
+  \***************************************************************/
+/***/ ((module) => {
+
+eval("\n\n/* istanbul ignore next  */\nfunction apply(styleElement, options, obj) {\n  var css = \"\";\n\n  if (obj.supports) {\n    css += \"@supports (\".concat(obj.supports, \") {\");\n  }\n\n  if (obj.media) {\n    css += \"@media \".concat(obj.media, \" {\");\n  }\n\n  var needLayer = typeof obj.layer !== \"undefined\";\n\n  if (needLayer) {\n    css += \"@layer\".concat(obj.layer.length > 0 ? \" \".concat(obj.layer) : \"\", \" {\");\n  }\n\n  css += obj.css;\n\n  if (needLayer) {\n    css += \"}\";\n  }\n\n  if (obj.media) {\n    css += \"}\";\n  }\n\n  if (obj.supports) {\n    css += \"}\";\n  }\n\n  var sourceMap = obj.sourceMap;\n\n  if (sourceMap && typeof btoa !== \"undefined\") {\n    css += \"\\n/*# sourceMappingURL=data:application/json;base64,\".concat(btoa(unescape(encodeURIComponent(JSON.stringify(sourceMap)))), \" */\");\n  } // For old IE\n\n  /* istanbul ignore if  */\n\n\n  options.styleTagTransform(css, styleElement, options.options);\n}\n\nfunction removeStyleElement(styleElement) {\n  // istanbul ignore if\n  if (styleElement.parentNode === null) {\n    return false;\n  }\n\n  styleElement.parentNode.removeChild(styleElement);\n}\n/* istanbul ignore next  */\n\n\nfunction domAPI(options) {\n  var styleElement = options.insertStyleElement(options);\n  return {\n    update: function update(obj) {\n      apply(styleElement, options, obj);\n    },\n    remove: function remove() {\n      removeStyleElement(styleElement);\n    }\n  };\n}\n\nmodule.exports = domAPI;\n\n//# sourceURL=webpack://odin-photo-tagging-game/./node_modules/style-loader/dist/runtime/styleDomAPI.js?");
+
+/***/ }),
+
+/***/ "./node_modules/style-loader/dist/runtime/styleTagTransform.js":
+/*!*********************************************************************!*\
+  !*** ./node_modules/style-loader/dist/runtime/styleTagTransform.js ***!
+  \*********************************************************************/
+/***/ ((module) => {
+
+eval("\n\n/* istanbul ignore next  */\nfunction styleTagTransform(css, styleElement) {\n  if (styleElement.styleSheet) {\n    styleElement.styleSheet.cssText = css;\n  } else {\n    while (styleElement.firstChild) {\n      styleElement.removeChild(styleElement.firstChild);\n    }\n\n    styleElement.appendChild(document.createTextNode(css));\n  }\n}\n\nmodule.exports = styleTagTransform;\n\n//# sourceURL=webpack://odin-photo-tagging-game/./node_modules/style-loader/dist/runtime/styleTagTransform.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
   \**********************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/app */ \"./node_modules/firebase/app/dist/index.esm.js\");\n/* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/firestore */ \"./node_modules/firebase/firestore/dist/index.esm.js\");\n// Import the functions you need from the SDKs you need\n\n// TODO: Add SDKs for Firebase products that you want to use\n// https://firebase.google.com/docs/web/setup#available-libraries\n\n// Your web app's Firebase configuration\nconst firebaseConfig = {\n  apiKey: \"AIzaSyCc_AQ4M7-SdiABMy2nEObGUEFeTGhs3i8\",\n  authDomain: \"odin-photo-tagging-game.firebaseapp.com\",\n  projectId: \"odin-photo-tagging-game\",\n  storageBucket: \"odin-photo-tagging-game.appspot.com\",\n  messagingSenderId: \"524954722565\",\n  appId: \"1:524954722565:web:1b2abd8e403ba17432d76c\"\n};\n\n// Initialize Firebase\nconst app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeApp)(firebaseConfig);\n\nlet imageHolder = document.querySelector('#image-holder')\nlet cursor = document.querySelector('#cursor')\nlet imageMenu = document.querySelector('#select-menu')\nlet imageMenuVisibility= false;\nlet givingDirections = true;\nlet menuItems = document.querySelectorAll('#select-menu div')\nlet locations = document.querySelectorAll('.location-button')\nlet storedLocations =''\nlet location = ''\nlet charsFound = 0;\nlet wilmaFound = false;\nlet waldoFound = false;\nlet odlawFound = false;\n\nfunction hideDirections(){\n    givingDirections = false;\n    let directionDiv = document.querySelector('#directions')\n    directionDiv.style.display = 'none'\n}\nfunction showHolder(){\n    imageHolder.style.display = 'block'\n}\nfunction hideHolder(){\n    imageHolder.style.display = 'none'\n}\nfunction showCongrats(){\n    let congrats = document.querySelector('#congrats') \n    congrats.style.display = 'flex'\n}\n\nfunction startTimer(){\n\n}\n\nasync function getLocations (){\n    try{\n    storedLocations = await (await (0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.getDocs)((0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.collection)((0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.getFirestore)(),`${location}`))).docs;\n    }\n    catch(error){\n        console.error('Error retrieving from Firebase Database', error);\n    }\n}\nasync function mapClick (loc,char,x,y){\n    try {\n        await (0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.addDoc)((0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.collection)((0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.getFirestore)(), `${loc}`), {\n          character: char,\n          xLoc: x,\n          yLoc: y\n        });\n      }\n      catch(error) {\n        console.error('Error writing new hotspot to Firebase Database', error);\n      }\n\n}\nfunction checkClick (char,x,y){\n    let found = false;\n    storedLocations.forEach((location)=>{\n        if ((location.data().character === char)&&\n        (parseInt(location.data().xLoc) >= parseInt(x)-20)&&\n        (parseInt(location.data().xLoc) <= parseInt(x)+20)&&\n        (parseInt(location.data().yLoc) >= parseInt(y)-20)&&\n        (parseInt(location.data().yLoc) <= parseInt(y)+20)){\n            console.log(`${char} found!`)\n            if ((char ===\"Waldo\")&&(waldoFound===false)){\n                waldoFound = true;\n                found = true;\n                charsFound+=1; \n            }else if ((char === \"Odlaw\")&&(odlawFound===false)){\n                odlawFound = true;\n                found = true;\n                charsFound+=1; \n            }\n            if ((char === \"Wilma\")&&(wilmaFound===false)){\n                wilmaFound = true;\n                found = true;\n                charsFound+=1; \n            }\n           \n        }\n    })\n    return found;\n\n}\n\nlocations.forEach((locationButton)=>{\n    locationButton.addEventListener('click',(e)=>{\n        location = e.target.innerText\n        switch(e.target.innerText){\n            case 'The Ski Slope':\n            imageHolder.style.backgroundImage = 'url(../imgs/waldo-ski.jpg)'\n            break;\n            case 'The Beach':\n                imageHolder.style.backgroundImage = 'url(../imgs/waldo-beach.jpg)'\n            break;\n            case 'The Moon Base':\n                imageHolder.style.backgroundImage = 'url(../imgs/waldo-space.jpg)'\n            break;\n            default:\n            break;\n        }\n        hideDirections()\n        showHolder()\n        getLocations()\n        startTimer()\n    });\n});\n\nmenuItems.forEach((imageItem)=>{\n    imageItem.addEventListener('click',(e)=>{\n        //mapClick(location,e.target.innerText,imageMenu.style.left,imageMenu.style.top)\n        \n        let tag = document.createElement('div')\n        tag.classList.add('tag')\n        if (checkClick(e.target.innerText,imageMenu.style.left,imageMenu.style.top)){\n            tag.classList.add('good')\n        } else {\n            tag.classList.add('bad')\n\n        }\n        console.log(`${charsFound} characters found!`)\n\n        tag.style.left = (parseInt(imageMenu.style.left)-27)+'px'\n        tag.style.top = (parseInt(imageMenu.style.top)-27)+'px'\n        imageHolder.appendChild(tag)\n        if (wilmaFound&&waldoFound&&odlawFound){\n            console.log('you win!')\n            hideHolder()\n            showCongrats()\n\n        }\n    })\n})\n\nconst toggleSelect = ()=>{\n\n    if (!imageMenuVisibility){\n        imageMenu.style.display= 'flex'\n        imageMenuVisibility = true;\n        imageHolder.style.cursor = 'auto'\n\n    } else {\n        imageMenu.style.display= 'none'\n        imageMenuVisibility = false;\n        imageHolder.style.cursor = 'none'\n    }\n\n}\n\n\nimageHolder.addEventListener('click',(e)=>{\n    imageMenu.style.top=(e.pageY)+'px'\n    imageMenu.style.left=(e.pageX)+'px'\n    toggleSelect()\n});\n\nimageHolder.addEventListener('mousemove',(e)=>{\n    if (!imageMenuVisibility){\n    cursor.style.top=(e.pageY-27)+'px'\n    cursor.style.left=(e.pageX-27)+'px'\n    }\n})\n\n//# sourceURL=webpack://odin-photo-tagging-game/./src/index.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var firebase_app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! firebase/app */ \"./node_modules/firebase/app/dist/index.esm.js\");\n/* harmony import */ var firebase_firestore__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! firebase/firestore */ \"./node_modules/firebase/firestore/dist/index.esm.js\");\n/* harmony import */ var _imgs_waldo_beach_jpg__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./imgs/waldo-beach.jpg */ \"./src/imgs/waldo-beach.jpg\");\n/* harmony import */ var _imgs_waldo_ski_jpg__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./imgs/waldo-ski.jpg */ \"./src/imgs/waldo-ski.jpg\");\n/* harmony import */ var _imgs_waldo_space_jpg__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./imgs/waldo-space.jpg */ \"./src/imgs/waldo-space.jpg\");\n/* harmony import */ var _styles_style_css__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./styles/style.css */ \"./src/styles/style.css\");\n/* harmony import */ var _imgs_Odlaw_webp__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./imgs/Odlaw.webp */ \"./src/imgs/Odlaw.webp\");\n/* harmony import */ var _imgs_Waldo_webp__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./imgs/Waldo.webp */ \"./src/imgs/Waldo.webp\");\n/* harmony import */ var _imgs_Wilma_webp__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./imgs/Wilma.webp */ \"./src/imgs/Wilma.webp\");\n// Import the functions you need from the SDKs you need\n\n// TODO: Add SDKs for Firebase products that you want to use\n// https://firebase.google.com/docs/web/setup#available-libraries\n\n  // Your web app's Firebase configuration\nconst firebaseConfig = {\n  apiKey: \"AIzaSyCc_AQ4M7-SdiABMy2nEObGUEFeTGhs3i8\",\n  authDomain: \"odin-photo-tagging-game.firebaseapp.com\",\n  projectId: \"odin-photo-tagging-game\",\n  storageBucket: \"odin-photo-tagging-game.appspot.com\",\n  messagingSenderId: \"524954722565\",\n  appId: \"1:524954722565:web:1b2abd8e403ba17432d76c\"\n};\n\n// Initialize Firebase\nconst app = (0,firebase_app__WEBPACK_IMPORTED_MODULE_0__.initializeApp)(firebaseConfig);\n\n\n\n\n\n\n\n\nlet odlawPic = document.querySelector('#odlaw-img')\nodlawPic.src = _imgs_Odlaw_webp__WEBPACK_IMPORTED_MODULE_6__;\nlet waldoPic = document.querySelector('#waldo-img')\nwaldoPic.src = _imgs_Waldo_webp__WEBPACK_IMPORTED_MODULE_7__;\nlet wilmaPic = document.querySelector('#wilma-img')\nwilmaPic.src = _imgs_Wilma_webp__WEBPACK_IMPORTED_MODULE_8__;\n\n\nlet imageHolder = document.querySelector('#image-holder')\nlet cursor = document.querySelector('#cursor')\nlet imageMenu = document.querySelector('#select-menu')\nlet imageMenuVisibility= false;\nlet givingDirections = true;\nlet menuItems = document.querySelectorAll('#select-menu div')\nlet locations = document.querySelectorAll('.location-button')\nlet storedLocations =''\nlet location = ''\nlet charsFound = 0;\nlet wilmaFound = false;\nlet waldoFound = false;\nlet odlawFound = false;\n\nfunction hideDirections(){\n    givingDirections = false;\n    let directionDiv = document.querySelector('#directions')\n    directionDiv.style.display = 'none'\n}\nfunction showHolder(){\n    imageHolder.style.display = 'block'\n}\nfunction hideHolder(){\n    imageHolder.style.display = 'none'\n}\nfunction showCongrats(){\n    let congrats = document.querySelector('#congrats') \n    congrats.style.display = 'flex'\n}\n\nfunction startTimer(){\n\n}\n\nasync function getLocations (){\n    try{\n    storedLocations = await (await (0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.getDocs)((0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.collection)((0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.getFirestore)(),`${location}`))).docs;\n    }\n    catch(error){\n        console.error('Error retrieving from Firebase Database', error);\n    }\n}\nasync function mapClick (loc,char,x,y){\n    try {\n        await (0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.addDoc)((0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.collection)((0,firebase_firestore__WEBPACK_IMPORTED_MODULE_1__.getFirestore)(), `${loc}`), {\n          character: char,\n          xLoc: x,\n          yLoc: y\n        });\n      }\n      catch(error) {\n        console.error('Error writing new hotspot to Firebase Database', error);\n      }\n\n}\nfunction checkClick (char,x,y){\n    let found = false;\n    storedLocations.forEach((location)=>{\n        if ((location.data().character === char)&&\n        (parseInt(location.data().xLoc) >= parseInt(x)-20)&&\n        (parseInt(location.data().xLoc) <= parseInt(x)+20)&&\n        (parseInt(location.data().yLoc) >= parseInt(y)-20)&&\n        (parseInt(location.data().yLoc) <= parseInt(y)+20)){\n            console.log(`${char} found!`)\n            if ((char ===\"Waldo\")&&(waldoFound===false)){\n                waldoFound = true;\n                found = true;\n                charsFound+=1; \n            }else if ((char === \"Odlaw\")&&(odlawFound===false)){\n                odlawFound = true;\n                found = true;\n                charsFound+=1; \n            }\n            if ((char === \"Wilma\")&&(wilmaFound===false)){\n                wilmaFound = true;\n                found = true;\n                charsFound+=1; \n            }\n           \n        }\n    })\n    return found;\n\n}\n\nlocations.forEach((locationButton)=>{\n    locationButton.addEventListener('click',(e)=>{\n        location = e.target.innerText\n        switch(e.target.innerText){\n            case 'The Ski Slope':\n                imageHolder.style.backGround = _imgs_waldo_ski_jpg__WEBPACK_IMPORTED_MODULE_3__\n            break;\n            case 'The Beach':\n                imageHolder.style.backGround = _imgs_waldo_beach_jpg__WEBPACK_IMPORTED_MODULE_2__\n            break;\n            case 'The Moon Base':\n                imageHolder.style.backGround = _imgs_waldo_space_jpg__WEBPACK_IMPORTED_MODULE_4__\n            break;\n            default:\n            break;\n        }\n        hideDirections()\n        showHolder()\n        getLocations()\n        startTimer()\n    });\n});\n\nmenuItems.forEach((imageItem)=>{\n    imageItem.addEventListener('click',(e)=>{\n        //mapClick(location,e.target.innerText,imageMenu.style.left,imageMenu.style.top)\n        \n        let tag = document.createElement('div')\n        tag.classList.add('tag')\n        if (checkClick(e.target.innerText,imageMenu.style.left,imageMenu.style.top)){\n            tag.classList.add('good')\n        } else {\n            tag.classList.add('bad')\n\n        }\n        console.log(`${charsFound} characters found!`)\n\n        tag.style.left = (parseInt(imageMenu.style.left)-27)+'px'\n        tag.style.top = (parseInt(imageMenu.style.top)-27)+'px'\n        imageHolder.appendChild(tag)\n        if (wilmaFound&&waldoFound&&odlawFound){\n            console.log('you win!')\n            hideHolder()\n            showCongrats()\n\n        }\n    })\n})\n\nconst toggleSelect = ()=>{\n\n    if (!imageMenuVisibility){\n        imageMenu.style.display= 'flex'\n        imageMenuVisibility = true;\n        imageHolder.style.cursor = 'auto'\n\n    } else {\n        imageMenu.style.display= 'none'\n        imageMenuVisibility = false;\n        imageHolder.style.cursor = 'none'\n    }\n\n}\n\n\nimageHolder.addEventListener('click',(e)=>{\n    imageMenu.style.top=(e.pageY)+'px'\n    imageMenu.style.left=(e.pageX)+'px'\n    toggleSelect()\n});\n\nimageHolder.addEventListener('mousemove',(e)=>{\n    if (!imageMenuVisibility){\n    cursor.style.top=(e.pageY-27)+'px'\n    cursor.style.left=(e.pageX-27)+'px'\n    }\n})\n\n//# sourceURL=webpack://odin-photo-tagging-game/./src/index.js?");
+
+/***/ }),
+
+/***/ "./src/imgs/Odlaw.webp":
+/*!*****************************!*\
+  !*** ./src/imgs/Odlaw.webp ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"673d74bd810530a6144d.webp\";\n\n//# sourceURL=webpack://odin-photo-tagging-game/./src/imgs/Odlaw.webp?");
+
+/***/ }),
+
+/***/ "./src/imgs/Waldo.webp":
+/*!*****************************!*\
+  !*** ./src/imgs/Waldo.webp ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"e249b92df389927f2dec.webp\";\n\n//# sourceURL=webpack://odin-photo-tagging-game/./src/imgs/Waldo.webp?");
+
+/***/ }),
+
+/***/ "./src/imgs/Wilma.webp":
+/*!*****************************!*\
+  !*** ./src/imgs/Wilma.webp ***!
+  \*****************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"18ccab30de14c2eef7e6.webp\";\n\n//# sourceURL=webpack://odin-photo-tagging-game/./src/imgs/Wilma.webp?");
+
+/***/ }),
+
+/***/ "./src/imgs/waldo-beach.jpg":
+/*!**********************************!*\
+  !*** ./src/imgs/waldo-beach.jpg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"bca2da5e8224cad6f0dd.jpg\";\n\n//# sourceURL=webpack://odin-photo-tagging-game/./src/imgs/waldo-beach.jpg?");
+
+/***/ }),
+
+/***/ "./src/imgs/waldo-ski.jpg":
+/*!********************************!*\
+  !*** ./src/imgs/waldo-ski.jpg ***!
+  \********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"29270c1997a6b000991e.jpg\";\n\n//# sourceURL=webpack://odin-photo-tagging-game/./src/imgs/waldo-ski.jpg?");
+
+/***/ }),
+
+/***/ "./src/imgs/waldo-space.jpg":
+/*!**********************************!*\
+  !*** ./src/imgs/waldo-space.jpg ***!
+  \**********************************/
+/***/ ((module, __unused_webpack_exports, __webpack_require__) => {
+
+eval("module.exports = __webpack_require__.p + \"e1b616592899fcd93699.jpg\";\n\n//# sourceURL=webpack://odin-photo-tagging-game/./src/imgs/waldo-space.jpg?");
 
 /***/ }),
 
@@ -134,7 +294,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
 /******/ 		var module = __webpack_module_cache__[moduleId] = {
-/******/ 			// no module.id needed
+/******/ 			id: moduleId,
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
 /******/ 		};
@@ -147,6 +307,18 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 	}
 /******/ 	
 /************************************************************************/
+/******/ 	/* webpack/runtime/compat get default export */
+/******/ 	(() => {
+/******/ 		// getDefaultExport function for compatibility with non-harmony modules
+/******/ 		__webpack_require__.n = (module) => {
+/******/ 			var getter = module && module.__esModule ?
+/******/ 				() => (module['default']) :
+/******/ 				() => (module);
+/******/ 			__webpack_require__.d(getter, { a: getter });
+/******/ 			return getter;
+/******/ 		};
+/******/ 	})();
+/******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
@@ -185,6 +357,31 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/publicPath */
+/******/ 	(() => {
+/******/ 		var scriptUrl;
+/******/ 		if (__webpack_require__.g.importScripts) scriptUrl = __webpack_require__.g.location + "";
+/******/ 		var document = __webpack_require__.g.document;
+/******/ 		if (!scriptUrl && document) {
+/******/ 			if (document.currentScript)
+/******/ 				scriptUrl = document.currentScript.src
+/******/ 			if (!scriptUrl) {
+/******/ 				var scripts = document.getElementsByTagName("script");
+/******/ 				if(scripts.length) scriptUrl = scripts[scripts.length - 1].src
+/******/ 			}
+/******/ 		}
+/******/ 		// When supporting browsers where an automatic publicPath is not supported you must specify an output.publicPath manually via configuration
+/******/ 		// or pass an empty string ("") and set the __webpack_public_path__ variable from your code to use your own logic.
+/******/ 		if (!scriptUrl) throw new Error("Automatic publicPath is not supported in this browser");
+/******/ 		scriptUrl = scriptUrl.replace(/#.*$/, "").replace(/\?.*$/, "").replace(/\/[^\/]+$/, "/");
+/******/ 		__webpack_require__.p = scriptUrl;
+/******/ 	})();
+/******/ 	
+/******/ 	/* webpack/runtime/nonce */
+/******/ 	(() => {
+/******/ 		__webpack_require__.nc = undefined;
 /******/ 	})();
 /******/ 	
 /************************************************************************/
