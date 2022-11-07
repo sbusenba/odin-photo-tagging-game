@@ -13,8 +13,10 @@
     height:50px;
     width:50px;
     border-radius: 25px;
-    border:2px solid black;
-    opacity:0.5;
+    border:2px dotted white;
+    color: white;
+    font-weight: 900;
+    opacity:0.75;
     position:absolute;
     display:flex;
     align-items: center;
@@ -25,6 +27,7 @@
     position:absolute;
     width:8rem;
     display:none;
+    cursor:default;
 }
 #select-menu ul{
     color:aliceblue;
@@ -39,4 +42,23 @@
     background-color: darkslategrey;
     padding:0.25rem;
     width:7.5rem;
+}
+.tag{
+    user-select: none;
+    height:50px;
+    width:50px;
+    border-radius: 25px;
+    opacity:0.75;
+    position:absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.tag.bad{
+    border:2px solid red;
+    
+}
+.tag.good {
+    border:2px solid green;
 }
