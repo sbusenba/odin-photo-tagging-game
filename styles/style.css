@@ -7,6 +7,7 @@
     background-image: url('../imgs/mcu-lrg.jpg');
     background-size: contain;
     background-repeat: no-repeat;
+    display:none;
 }
 #cursor {
     user-select: none;
@@ -96,8 +97,14 @@
 
 .location-button{
     border-radius: 5px;
-    border:2px black solid;
+    box-shadow:2px 2px 2px 2px darkgray;
     padding:.5rem;
+}
+.location-button:hover{
+    border-radius: 5px;
+    background-color: rgb(199, 199, 199);
+    padding:.5rem;
+    box-shadow: none;
 }
 #directions>div{
     margin:1rem;
