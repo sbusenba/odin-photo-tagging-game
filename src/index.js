@@ -50,7 +50,7 @@ function hideHolder(){
 }
 function showCongrats(){
     let congrats = document.querySelector('#congrats') 
-    congrats.style.display = 'block'
+    congrats.style.display = 'flex'
 }
 
 function startTimer(){

@@ -109,3 +109,8 @@
 #directions>div{
     margin:1rem;
 }
+#congrats{
+    display:none;
+    flex-direction: column;
+    align-items: center;
+}
