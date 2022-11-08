@@ -23,9 +23,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-import beachImg from './imgs/waldo-beach.jpg'
-import skiImg from './imgs/waldo-ski.jpg'
-import moonImg from './imgs/waldo-space.jpg'
+
 import './styles/style.css'
 import odlawImg from './imgs/Odlaw.webp'
 import waldoImg from './imgs/Waldo.webp'
@@ -45,6 +43,8 @@ let imageMenuVisibility= false;
 let givingDirections = true;
 let menuItems = document.querySelectorAll('#select-menu div')
 let locations = document.querySelectorAll('.location-button')
+let scoreButton = document.querySelector('#submit-score')
+let scoreInput = document.querySelector('#score-name')
 let storedLocations =''
 let location = ''
 let charsFound = 0;
@@ -53,6 +53,9 @@ let waldoFound = false;
 let odlawFound = false;
 let timer = null;
 let secondsElapsed = 0;
+let storedScores =[]
+let scoreBoard = document.querySelector('#scoreboard')
+
 function hideDirections(){
     givingDirections = false;
     let directionDiv = document.querySelector('#directions')
@@ -75,6 +78,31 @@ function startTimer(){
 function stopTimer(){
     clearInterval(timer)
 }
+
+async function getScores (){
+    try{
+        storedScores = await(await getDocs(collection(getFirestore(),`highscores`))).docs;
+        console.table(storedScores)
+    }
+    catch(error){
+        console.error('Error retrieving scores from Firebase Database', error);
+    }
+}
+async function addScore (name,score){
+    try {
+        await addDoc(collection(getFirestore(), `highscores`), {
+          name: name,
+          score: score,
+          location: location
+        });
+      }
+      catch(error) {
+        console.error('Error writing new score to Firebase Database', error);
+      }
+
+}
+
+
 async function getLocations (){
     try{
     storedLocations = await (await getDocs(collection(getFirestore(),`${location}`))).docs;
@@ -119,11 +147,9 @@ function checkClick (char,x,y){
                 found = true;
                 charsFound+=1; 
             }
-           
         }
     })
     return found;
-
 }
 
 locations.forEach((locationButton)=>{
@@ -180,7 +206,6 @@ menuItems.forEach((imageItem)=>{
 })
 
 const toggleSelect = ()=>{
-
     if (!imageMenuVisibility){
         imageMenu.style.display= 'flex'
         imageMenuVisibility = true;
@@ -191,9 +216,7 @@ const toggleSelect = ()=>{
         imageMenuVisibility = false;
         imageHolder.style.cursor = 'none'
     }
-
 }
-
 
 imageHolder.addEventListener('click',(e)=>{
     imageMenu.style.top=(e.pageY)+'px'
@@ -207,3 +230,18 @@ imageHolder.addEventListener('mousemove',(e)=>{
     cursor.style.left=(e.pageX-27)+'px'
     }
 })
+
+scoreButton.addEventListener('click',()=>{ 
+   addScore(scoreInput.value,secondsElapsed)
+   document.querySelector("#score-entry-div").style.display = 'none'
+   let scoreData = document.querySelector('#scoreboard')
+   storedScores.forEach((score)=>{
+    if (score.data().location ===location){
+        let scoreItem = document.createElement('div')
+        scoreItem.innerText = `${score.data().name} completed ${score.data().location} in ${score.data().score}s`
+        scoreData.appendChild(scoreItem)
+    }
+
+   });
+        })
+ getScores()
